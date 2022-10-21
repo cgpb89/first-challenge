@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 module.exports = function databaseConnection() {
-    const uri = "mongodb+srv://carlos:carlos89@cluster0.fqv7vlz.mongodb.net/employee?retryWrites=true&w=majority";
+    const uri = "mongodb+srv://<USER_NAME>:<PASSWORD>@cluster0.fqv7vlz.mongodb.net/employee?retryWrites=true&w=majority";
     const connectionParams={
       useNewUrlParser: true,
       useUnifiedTopology: true 

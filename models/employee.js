@@ -15,12 +15,12 @@ const employeeSchema = new mongoose.Schema({
         required: [true, 'Employee must have a surname']
     },
     level: {
-        type: String,
-        required: [true, 'Employee must have a level']
+        type: Number,
+        required: [true, 'Employee must have a level. Level must be number']
     },
     salary: {
         type: Number,
-        required: [true, 'Employee must have a surname']
+        required: [true, 'Employee must have a surname. Surname must be number']
     },
     date: { type: Date, default: Date.now }
 });
