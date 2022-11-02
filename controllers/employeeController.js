@@ -1,5 +1,5 @@
 const Employee = require('../models/employee');
-const { validationResult } = require('express-validator');
+const { generateNewJWT } = require('../auth/auth');
 
 // Other way to set the next available ID. Store it in another collection
 async function getNextSequenceValue(sequenceName) {
@@ -72,7 +72,7 @@ async function addEmployee (req) {
 
 exports.employeeList = async (req, res) => {
     const employees = await Employee.find();
-    return res.status(201).json(employees);
+    return res.status(201).json({token: generateNewJWT(req.headers.authorization), employees: employees});
 };
 
 exports.getEmployee = async (req, res) => {
@@ -80,7 +80,7 @@ exports.getEmployee = async (req, res) => {
     if (!employee) {
         return res.status(404).send('Employee not found with ID: ' + req.params.id);
     }
-    return res.status(201).json(employee);
+    return res.status(201).json({token: generateNewJWT(req.headers.authorization), employee: employee});
 }
 
 exports.createEmployee = async (req, res) => {
@@ -98,14 +98,12 @@ exports.createEmployee = async (req, res) => {
     })
 
     if (employee.validateSync()) {
-        console.log('entra sync')
         return res.status(201).json({
             message: employee.validateSync().message
         });
     } else {
-        console.log('entra else')
-
         return res.status(201).json({
+            token: generateNewJWT(req.headers.authorization),
             _id: employee.id,
             name: employee.name
         });
@@ -119,7 +117,8 @@ exports.updateEmployee = async (req, res) => {
     }
 
     return res.status(201).json({
-        message: `Employee with ID: ${employee.id} was update successfully`
+        message: `Employee with ID: ${employee.id} was update successfully`,
+        token: generateNewJWT(req.headers.authorization)
     });
 }
 
@@ -130,7 +129,7 @@ exports.deleteEmployee = async (req, res) => {
         return res.status(404).send("Employee does not exist");
     }
 
-    return res.status(200).send("Employee deleted");
+    return res.status(200).json({ token: generateNewJWT(req.headers.authorization), message: "Employee deleted" });
 };
 
 // This approach is not recommended. Such validation must be avoid in the FE and use simple post to insert or put to update
@@ -142,13 +141,15 @@ exports.customEmployee = async (req, res) => {
             return res.status(201).json({
                 _id: employee.id,
                 name: employee.name,
-                msg: "Employee create with custom ID"
+                msg: "Employee create with custom ID",
+                token: generateNewJWT(req.headers.authorization)
             });
         }
         return res.status(201).json({
             _id: employee.id,
             name: employee.name,
-            msg: `Employee updated with ID:${employee.id}`
+            msg: `Employee updated with ID:${employee.id}`,
+            token: generateNewJWT(req.headers.authorization)
         });
     } else {
         const employee = await addEmployee(req)
@@ -161,7 +162,8 @@ exports.customEmployee = async (req, res) => {
         return res.status(201).json({
             _id: employee.id,
             name: employee.name,
-            msg: `New employee created`
+            msg: `New employee created`,
+            token: generateNewJWT(req.headers.authorization)
         });
     }
 };
