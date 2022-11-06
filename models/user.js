@@ -7,12 +7,20 @@ const UserSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
+    firstName: {
+        type: String
+
+    },
+    lastName: {
+        type: String
+    },
     email: {
         type: String,
+        unique: true
     },
     password: {
         type: String,
-        required: true
+        require: true
     }
 });
 
@@ -38,9 +46,9 @@ UserSchema.pre('save', async function(next){
 UserSchema.methods.generateJWT = function () {
     return jwt.sign({ user: {
         _id: this._id,
-        email: this.email
+        email: this.email,
     }
-    }, 'secret_token', {expiresIn: '2m'});
+    }, 'secret_token', {expiresIn: '30m'});
 }
 
 const User = mongoose.model('user', UserSchema);

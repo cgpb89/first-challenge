@@ -1,5 +1,6 @@
 const Employee = require('../models/employee');
 const { generateNewJWT } = require('../auth/auth');
+const logger = require('../logger')
 
 // Other way to set the next available ID. Store it in another collection
 async function getNextSequenceValue(sequenceName) {
@@ -72,14 +73,17 @@ async function addEmployee (req) {
 
 exports.employeeList = async (req, res) => {
     const employees = await Employee.find();
+    logger.debug('Employee list found')
     return res.status(201).json({token: generateNewJWT(req.headers.authorization), employees: employees});
 };
 
 exports.getEmployee = async (req, res) => {
     const employee = await Employee.findOne({ id: req.params.id });
     if (!employee) {
+        logger.debug('Employee not found with ID: ' + req.params.id)
         return res.status(404).send('Employee not found with ID: ' + req.params.id);
     }
+    logger.debug('Employee found')
     return res.status(201).json({token: generateNewJWT(req.headers.authorization), employee: employee});
 }
 
@@ -93,15 +97,20 @@ exports.createEmployee = async (req, res) => {
     });
 
     await employee.save(function (err, employee) {
-        if (err) return console.error(err);
-        console.log(employee.name + " saved to employee collection.");
+        if (err) {
+            logger.error(err)
+            return res.send(err)
+        }
+        logger.debug(employee.name + " saved to employee collection.")
     })
 
     if (employee.validateSync()) {
+        logger.debug(employee.validateSync().message)
         return res.status(201).json({
             message: employee.validateSync().message
         });
     } else {
+        logger.debug(`Employee retrieved to user`)
         return res.status(201).json({
             token: generateNewJWT(req.headers.authorization),
             _id: employee.id,
@@ -113,8 +122,11 @@ exports.createEmployee = async (req, res) => {
 exports.updateEmployee = async (req, res) => {
     const employee = await updateEmployeeById(req, req.params.id);
     if (!employee) {
+        logger.debug("Employee does not exist")
         return res.status(404).send("Employee does not exist");
     }
+
+    logger.debug(`Employee with ID: ${employee.id} was update successfully`)
 
     return res.status(201).json({
         message: `Employee with ID: ${employee.id} was update successfully`,
@@ -126,9 +138,10 @@ exports.deleteEmployee = async (req, res) => {
     const employee = await Employee.findOneAndDelete({ id: req.params.id });
 
     if (!employee) {
+        logger.info('Employee does not exist')
         return res.status(404).send("Employee does not exist");
     }
-
+    logger.info('Employee deleted')
     return res.status(200).json({ token: generateNewJWT(req.headers.authorization), message: "Employee deleted" });
 };
 
@@ -138,6 +151,7 @@ exports.customEmployee = async (req, res) => {
         const employee = await updateEmployeeById(req, parseInt(req.body.id))
         if (!employee) {
             const employee = await addEmployee(req)
+            logger.info(`Employee create with custom ID: ${employee.id}`)
             return res.status(201).json({
                 _id: employee.id,
                 name: employee.name,
@@ -145,6 +159,7 @@ exports.customEmployee = async (req, res) => {
                 token: generateNewJWT(req.headers.authorization)
             });
         }
+        logger.info(`Employee updated with custom ID: ${employee.id}`)
         return res.status(201).json({
             _id: employee.id,
             name: employee.name,
@@ -154,11 +169,13 @@ exports.customEmployee = async (req, res) => {
     } else {
         const employee = await addEmployee(req)
         if (employee.error) {
+            logger.error(employee.error.message)
             return res.status(201).send({
                 message: employee.error.message
             });
             
         }
+        logger.info(`New employee created with ID: ${employee.id}`)
         return res.status(201).json({
             _id: employee.id,
             name: employee.name,

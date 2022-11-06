@@ -5,10 +5,10 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const  databaseLocalConnection = require('./dbConfig/db.config');
-require("./auth/auth");
 const employeeRouter = require('./routes/employeeRoute');
 const userRoute = require('./routes/userRoute')
 const passport = require('passport');
+require("./auth/auth");
 var app = express();
 
 // Data Base connection
