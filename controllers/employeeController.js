@@ -55,8 +55,8 @@ async function addEmployee (req) {
         salary: req.body.salary,
     });
     await employee.save(function (err, employee) {
-        if (err) return console.error(err);
-        console.log(employee.name + " saved to employee collection.");
+        if (err) return logger.error(err);
+        logger.debug(employee.name + " saved to employee collection.")
     })
     if (employee.validateSync()) {
         return { error: {
@@ -151,7 +151,7 @@ exports.customEmployee = async (req, res) => {
         const employee = await updateEmployeeById(req, parseInt(req.body.id))
         if (!employee) {
             const employee = await addEmployee(req)
-            logger.info(`Employee create with custom ID: ${employee.id}`)
+            logger.warn(`Employee create with custom ID: ${employee.id}`)
             return res.status(201).json({
                 _id: employee.id,
                 name: employee.name,
@@ -159,7 +159,7 @@ exports.customEmployee = async (req, res) => {
                 token: generateNewJWT(req.headers.authorization)
             });
         }
-        logger.info(`Employee updated with custom ID: ${employee.id}`)
+        logger.warn(`Employee updated with custom ID: ${employee.id}`)
         return res.status(201).json({
             _id: employee.id,
             name: employee.name,
@@ -175,7 +175,7 @@ exports.customEmployee = async (req, res) => {
             });
             
         }
-        logger.info(`New employee created with ID: ${employee.id}`)
+        logger.warn(`New employee created with ID: ${employee.id}`)
         return res.status(201).json({
             _id: employee.id,
             name: employee.name,

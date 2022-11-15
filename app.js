@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const  databaseLocalConnection = require('./dbConfig/db.config');
 const employeeRouter = require('./routes/employeeRoute');
 const userRoute = require('./routes/userRoute')
+const downloadLogs = require('./routes/dowloadLogs')
 const passport = require('passport');
 require("./auth/auth");
 var app = express();
@@ -27,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/employee', employeeRouter);
 app.use('/user', userRoute)
+app.use('/download-logs', downloadLogs)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -19,6 +19,10 @@ const logger = createLogger({
         level: "error",
         filename: "logger/logs/error.txt",
       }),
+      new transports.File({
+        level: "warn",
+        filename: "logger/logs/warning.txt",
+      }),
   ]
 });
 
