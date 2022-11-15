@@ -1,0 +1,15 @@
+2022-11-06T20:50:31.774Z [coe_challenge] error: Email already registered!
+2022-11-06T20:51:33.474Z [coe_challenge] error: Email already registered!
+2022-11-06T20:54:02.604Z [coe_challenge] error: Cannot set headers after they are sent to the client
+2022-11-11T22:04:38.595Z [coe_challenge] error: path argument is required to res.sendFile
+2022-11-11T22:06:29.805Z [coe_challenge] error: path argument is required to res.sendFile
+2022-11-11T22:06:49.970Z [coe_challenge] error: path argument is required to res.sendFile
+2022-11-11T22:09:32.847Z [coe_challenge] error: file is not defined
+2022-11-11T22:10:03.701Z [coe_challenge] error: path argument is required to res.sendFile
+2022-11-11T22:14:46.287Z [coe_challenge] error: path argument is required to res.sendFile
+2022-11-11T22:21:40.388Z [coe_challenge] error: path argument is required to res.sendFile
+2022-11-11T22:26:26.857Z [coe_challenge] error: path argument is required to res.sendFile
+2022-11-14T14:11:22.211Z [coe_challenge] error: path argument is required to res.sendFile
+2022-11-14T14:11:47.933Z [coe_challenge] error: ENOENT: no such file or directory, stat '/Users/carlospereira/Documents/GAP/coe/ChallengeOne/logger/logs/warn.txt'
+2022-11-14T14:12:07.449Z [coe_challenge] error: ENOENT: no such file or directory, stat '/Users/carlospereira/Documents/GAP/coe/ChallengeOne/logger/logs/warn.txt'
+2022-11-14T14:12:41.888Z [coe_challenge] error: path argument is required to res.sendFile

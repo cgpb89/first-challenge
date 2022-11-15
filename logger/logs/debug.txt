@@ -1,0 +1,201 @@
+2022-11-06T20:51:27.501Z [coe_challenge] debug: Connected to database 
+2022-11-06T20:51:33.220Z [coe_challenge] debug: API call from /user/signup. Method: POST
+2022-11-06T20:51:33.474Z [coe_challenge] error: Email already registered!
+2022-11-06T20:51:33.474Z [coe_challenge] debug: Email already registered!
+2022-11-06T20:51:48.816Z [coe_challenge] debug: API call from /user/list-users. Method: GET
+2022-11-06T20:51:49.049Z [coe_challenge] debug: Lista de usuarios encontrada
+2022-11-06T20:52:16.951Z [coe_challenge] debug: API call from /user/636801005c221b14a0fd44ab. Method: GET
+2022-11-06T20:52:17.176Z [coe_challenge] debug: Usuario encontrado
+2022-11-06T20:52:29.018Z [coe_challenge] debug: API call from /user/login. Method: POST
+2022-11-06T20:53:09.152Z [coe_challenge] debug: API call from /user/636801005c221b14a0fd44ab. Method: PUT
+2022-11-06T20:53:09.495Z [coe_challenge] debug: User with ID: 636801005c221b14a0fd44ab was update successfully
+2022-11-06T20:53:41.702Z [coe_challenge] debug: Connected to database 
+2022-11-06T20:53:55.075Z [coe_challenge] debug: API call from /user/list-users. Method: GET
+2022-11-06T20:53:55.264Z [coe_challenge] debug: Lista de usuarios encontrada
+2022-11-06T20:54:02.382Z [coe_challenge] debug: API call from /user/6368193d4a0681e0f6e56451. Method: DELETE
+2022-11-06T20:54:02.601Z [coe_challenge] debug: User does not exist
+2022-11-06T20:54:02.602Z [coe_challenge] debug: User deleted
+2022-11-06T20:54:02.604Z [coe_challenge] error: Cannot set headers after they are sent to the client
+2022-11-06T20:54:30.007Z [coe_challenge] debug: Connected to database 
+2022-11-06T20:54:30.944Z [coe_challenge] debug: API call from /user/636801005c221b14a0fd44ab. Method: DELETE
+2022-11-06T20:54:31.178Z [coe_challenge] debug: User deleted
+2022-11-06T20:54:38.153Z [coe_challenge] debug: API call from /user/636801005c221b14a0fd44ab. Method: DELETE
+2022-11-06T20:54:38.370Z [coe_challenge] debug: User does not exist
+2022-11-06T20:55:18.774Z [coe_challenge] debug: API call from /employee/5. Method: GET
+2022-11-06T20:55:18.996Z [coe_challenge] debug: Employee found
+2022-11-06T20:55:43.538Z [coe_challenge] debug: API call from /employee/list-users. Method: GET
+2022-11-06T20:55:43.648Z [coe_challenge] info: Validation error id must be number. Param: id. Location: params
+2022-11-06T20:56:00.256Z [coe_challenge] debug: API call from /employee/list. Method: GET
+2022-11-06T20:56:00.474Z [coe_challenge] debug: Employee list found
+2022-11-06T20:56:18.052Z [coe_challenge] debug: API call from /employee/124e. Method: DELETE
+2022-11-06T20:56:18.162Z [coe_challenge] info: Validation error id must be number. Param: id. Location: params
+2022-11-06T20:56:32.419Z [coe_challenge] debug: API call from /employee/11. Method: DELETE
+2022-11-06T20:56:32.632Z [coe_challenge] info: Employee deleted
+2022-11-06T20:57:08.102Z [coe_challenge] debug: API call from /employee/8. Method: DELETE
+2022-11-06T20:57:08.321Z [coe_challenge] info: Employee deleted
+2022-11-06T20:57:11.529Z [coe_challenge] debug: API call from /employee/9. Method: DELETE
+2022-11-06T20:57:11.750Z [coe_challenge] info: Employee deleted
+2022-11-06T20:57:15.237Z [coe_challenge] debug: API call from /employee/10. Method: DELETE
+2022-11-06T20:57:15.444Z [coe_challenge] info: Employee deleted
+2022-11-06T20:57:18.943Z [coe_challenge] debug: API call from /employee/list. Method: GET
+2022-11-06T20:57:19.122Z [coe_challenge] debug: Employee list found
+2022-11-06T20:57:48.977Z [coe_challenge] debug: API call from /employee/list. Method: GET
+2022-11-06T20:57:54.610Z [coe_challenge] debug: API call from /employee/list. Method: GET
+2022-11-06T20:57:54.811Z [coe_challenge] debug: Employee list found
+2022-11-06T20:58:22.388Z [coe_challenge] debug: API call from /employee/5. Method: PUT
+2022-11-06T20:58:22.480Z [coe_challenge] info: Validation error level must be number. Param: level. Location: body,Validation error salary must be number. Param: salary. Location: body
+2022-11-06T20:58:31.567Z [coe_challenge] debug: API call from /employee/5. Method: PUT
+2022-11-06T20:58:31.793Z [coe_challenge] debug: Employee with ID: 5 was update successfully
+2022-11-06T20:59:22.978Z [coe_challenge] debug: API call from /employee/employee-custom. Method: POST
+2022-11-06T20:59:45.126Z [coe_challenge] debug: API call from /employee/employee-custom. Method: POST
+2022-11-06T20:59:56.336Z [coe_challenge] debug: API call from /user/login. Method: POST
+2022-11-06T21:00:07.260Z [coe_challenge] debug: API call from /employee/employee-custom. Method: POST
+2022-11-06T21:00:07.482Z [coe_challenge] info: New employee created with ID: undefined
+2022-11-06T21:00:23.846Z [coe_challenge] debug: API call from /employee/list. Method: GET
+2022-11-06T21:00:28.440Z [coe_challenge] debug: API call from /employee/list. Method: GET
+2022-11-06T21:00:28.655Z [coe_challenge] debug: Employee list found
+2022-11-06T21:00:40.485Z [coe_challenge] debug: API call from /employee/employee-custom. Method: POST
+2022-11-06T21:00:40.704Z [coe_challenge] info: Employee create with custom ID: undefined
+2022-11-06T21:00:53.805Z [coe_challenge] debug: API call from /employee/list. Method: GET
+2022-11-06T21:00:54.021Z [coe_challenge] debug: Employee list found
+2022-11-06T21:01:13.540Z [coe_challenge] debug: API call from /employee/employee-custom. Method: POST
+2022-11-06T21:01:13.757Z [coe_challenge] info: New employee created with ID: undefined
+2022-11-06T21:01:18.156Z [coe_challenge] debug: API call from /employee/list. Method: GET
+2022-11-06T21:01:18.357Z [coe_challenge] debug: Employee list found
+2022-11-06T21:01:44.999Z [coe_challenge] debug: API call from /employee/employee-custom. Method: POST
+2022-11-06T21:01:45.218Z [coe_challenge] info: Employee updated with custom ID: 11
+2022-11-11T20:57:08.583Z [coe_challenge] debug: Connected to database 
+2022-11-11T20:57:12.149Z [coe_challenge] debug: Connected to database 
+2022-11-11T20:59:24.877Z [coe_challenge] debug: Connected to database 
+2022-11-11T21:01:09.306Z [coe_challenge] debug: Connected to database 
+2022-11-11T21:01:15.977Z [coe_challenge] debug: Connected to database 
+2022-11-11T21:02:32.103Z [coe_challenge] debug: Connected to database 
+2022-11-11T21:03:10.455Z [coe_challenge] debug: Connected to database 
+2022-11-11T21:03:28.097Z [coe_challenge] debug: Connected to database 
+2022-11-11T21:03:39.254Z [coe_challenge] debug: Connected to database 
+2022-11-11T21:05:50.020Z [coe_challenge] debug: API call from /user/login. Method: POST
+2022-11-11T21:06:31.763Z [coe_challenge] debug: Connected to database 
+2022-11-11T21:10:10.660Z [coe_challenge] debug: API call from /download-logs/test. Method: GET
+2022-11-11T21:10:25.739Z [coe_challenge] debug: API call from /download-logs/test. Method: GET
+2022-11-11T21:12:02.045Z [coe_challenge] debug: Connected to database 
+2022-11-11T21:12:04.515Z [coe_challenge] debug: API call from /download-logs/test. Method: GET
+2022-11-11T21:13:10.161Z [coe_challenge] debug: Connected to database 
+2022-11-11T21:13:15.973Z [coe_challenge] debug: Connected to database 
+2022-11-11T21:13:21.477Z [coe_challenge] debug: API call from /download-logs/test. Method: GET
+2022-11-11T21:13:49.432Z [coe_challenge] debug: Connected to database 
+2022-11-11T21:14:18.712Z [coe_challenge] debug: Connected to database 
+2022-11-11T21:14:27.676Z [coe_challenge] debug: API call from /download-logs/test. Method: GET
+2022-11-11T21:16:09.390Z [coe_challenge] debug: Connected to database 
+2022-11-11T21:16:12.524Z [coe_challenge] debug: API call from /download-logs/test. Method: GET
+2022-11-11T21:16:35.047Z [coe_challenge] debug: Connected to database 
+2022-11-11T21:32:11.196Z [coe_challenge] debug: Connected to database 
+2022-11-11T21:32:47.091Z [coe_challenge] debug: API call from /download-logs/error. Method: GET
+2022-11-11T21:33:25.845Z [coe_challenge] debug: Connected to database 
+2022-11-11T21:34:35.121Z [coe_challenge] debug: Connected to database 
+2022-11-11T21:35:00.873Z [coe_challenge] debug: Connected to database 
+2022-11-11T21:38:18.528Z [coe_challenge] debug: API call from /download-logs/error. Method: GET
+2022-11-11T21:38:24.411Z [coe_challenge] debug: API call from /user/login. Method: POST
+2022-11-11T21:38:36.784Z [coe_challenge] debug: API call from /download-logs/error. Method: GET
+2022-11-11T21:46:39.799Z [coe_challenge] debug: Connected to database 
+2022-11-11T21:46:59.864Z [coe_challenge] debug: API call from /download-logs/error. Method: GET
+2022-11-11T22:00:47.617Z [coe_challenge] debug: Connected to database 
+2022-11-11T22:00:53.774Z [coe_challenge] debug: Connected to database 
+2022-11-11T22:00:56.822Z [coe_challenge] debug: API call from /download-logs/error. Method: GET
+2022-11-11T22:01:58.003Z [coe_challenge] debug: Connected to database 
+2022-11-11T22:02:52.428Z [coe_challenge] debug: Connected to database 
+2022-11-11T22:03:00.082Z [coe_challenge] debug: Connected to database 
+2022-11-11T22:03:07.136Z [coe_challenge] debug: API call from /download-logs/error. Method: GET
+2022-11-11T22:03:51.529Z [coe_challenge] debug: Connected to database 
+2022-11-11T22:03:53.965Z [coe_challenge] debug: API call from /download-logs/error. Method: GET
+2022-11-11T22:04:38.504Z [coe_challenge] debug: API call from /download-logs/debug. Method: GET
+2022-11-11T22:04:38.595Z [coe_challenge] error: path argument is required to res.sendFile
+2022-11-11T22:04:53.094Z [coe_challenge] debug: API call from /download-logs/info. Method: GET
+2022-11-11T22:05:38.876Z [coe_challenge] debug: API call from /download-logs/warning. Method: GET
+2022-11-11T22:06:15.010Z [coe_challenge] debug: Connected to database 
+2022-11-11T22:06:29.680Z [coe_challenge] debug: API call from /download-logs/debug. Method: GET
+2022-11-11T22:06:29.805Z [coe_challenge] error: path argument is required to res.sendFile
+2022-11-11T22:06:48.778Z [coe_challenge] debug: API call from /download-logs/debug. Method: GET
+2022-11-11T22:06:49.397Z [coe_challenge] debug: Connected to database 
+2022-11-11T22:06:49.970Z [coe_challenge] error: path argument is required to res.sendFile
+2022-11-11T22:09:10.783Z [coe_challenge] debug: Connected to database 
+2022-11-11T22:09:17.804Z [coe_challenge] debug: API call from /download-logs/debug. Method: GET
+2022-11-11T22:09:23.086Z [coe_challenge] debug: API call from /user/login. Method: POST
+2022-11-11T22:09:32.750Z [coe_challenge] debug: API call from /download-logs/debug. Method: GET
+2022-11-11T22:09:32.847Z [coe_challenge] error: file is not defined
+2022-11-11T22:10:01.306Z [coe_challenge] debug: Connected to database 
+2022-11-11T22:10:03.597Z [coe_challenge] debug: API call from /download-logs/debug. Method: GET
+2022-11-11T22:10:03.701Z [coe_challenge] error: path argument is required to res.sendFile
+2022-11-11T22:14:39.293Z [coe_challenge] debug: Connected to database 
+2022-11-11T22:14:46.186Z [coe_challenge] debug: API call from /download-logs/debug. Method: GET
+2022-11-11T22:14:46.287Z [coe_challenge] error: path argument is required to res.sendFile
+2022-11-11T22:21:40.294Z [coe_challenge] debug: API call from /download-logs/debug. Method: GET
+2022-11-11T22:21:40.388Z [coe_challenge] error: path argument is required to res.sendFile
+2022-11-11T22:21:51.890Z [coe_challenge] debug: API call from /download-logs/error. Method: GET
+2022-11-11T22:22:10.976Z [coe_challenge] debug: Connected to database 
+2022-11-11T22:25:34.712Z [coe_challenge] debug: API call from /download-logs/error. Method: GET
+2022-11-11T22:25:34.817Z [coe_challenge] debug: File retrieved
+2022-11-11T22:26:26.747Z [coe_challenge] debug: API call from /download-logs/debug. Method: GET
+2022-11-11T22:26:26.857Z [coe_challenge] error: path argument is required to res.sendFile
+2022-11-11T22:26:46.992Z [coe_challenge] debug: Connected to database 
+2022-11-11T22:26:56.265Z [coe_challenge] debug: Connected to database 
+2022-11-14T13:58:51.359Z [coe_challenge] debug: Connected to database 
+2022-11-14T14:02:18.283Z [coe_challenge] debug: API call from /user/login. Method: POST
+2022-11-14T14:02:40.865Z [coe_challenge] debug: API call from /employee/employee-custom. Method: POST
+2022-11-14T14:06:51.545Z [coe_challenge] debug: Connected to database 
+2022-11-14T14:08:27.238Z [coe_challenge] debug: API call from /employee/employee-custom. Method: POST
+2022-11-14T14:09:24.292Z [coe_challenge] debug: Connected to database 
+2022-11-14T14:10:04.151Z [coe_challenge] debug: Connected to database 
+2022-11-14T14:10:29.311Z [coe_challenge] debug: API call from /employee/employee-custom. Method: POST
+2022-11-14T14:10:29.529Z [coe_challenge] warn: Employee updated with custom ID: 11
+2022-11-14T14:11:01.444Z [coe_challenge] debug: Connected to database 
+2022-11-14T14:11:08.673Z [coe_challenge] debug: API call from /download-logs/warn. Method: GET
+2022-11-14T14:11:22.107Z [coe_challenge] debug: API call from /download-logs/warn. Method: GET
+2022-11-14T14:11:22.211Z [coe_challenge] error: path argument is required to res.sendFile
+2022-11-14T14:11:47.839Z [coe_challenge] debug: API call from /download-logs/warning. Method: GET
+2022-11-14T14:11:47.933Z [coe_challenge] error: ENOENT: no such file or directory, stat '/Users/carlospereira/Documents/GAP/coe/ChallengeOne/logger/logs/warn.txt'
+2022-11-14T14:12:07.354Z [coe_challenge] debug: API call from /download-logs/warning. Method: GET
+2022-11-14T14:12:07.449Z [coe_challenge] error: ENOENT: no such file or directory, stat '/Users/carlospereira/Documents/GAP/coe/ChallengeOne/logger/logs/warn.txt'
+2022-11-14T14:12:12.580Z [coe_challenge] debug: Connected to database 
+2022-11-14T14:12:13.361Z [coe_challenge] debug: API call from /download-logs/warning. Method: GET
+2022-11-14T14:12:13.479Z [coe_challenge] debug: File retrieved
+2022-11-14T14:12:41.795Z [coe_challenge] debug: API call from /download-logs/warn. Method: GET
+2022-11-14T14:12:41.888Z [coe_challenge] error: path argument is required to res.sendFile
+2022-11-14T14:13:27.797Z [coe_challenge] debug: Connected to database 
+2022-11-14T14:13:30.188Z [coe_challenge] debug: API call from /download-logs/warn. Method: GET
+2022-11-14T14:13:57.049Z [coe_challenge] debug: Connected to database 
+2022-11-14T14:13:58.968Z [coe_challenge] debug: API call from /download-logs/warn. Method: GET
+2022-11-14T14:14:02.723Z [coe_challenge] debug: API call from /download-logs/warning. Method: GET
+2022-11-14T14:14:02.818Z [coe_challenge] debug: File retrieved
+2022-11-14T14:14:08.284Z [coe_challenge] debug: API call from /download-logs/debug. Method: GET
+2022-11-14T14:14:16.374Z [coe_challenge] debug: API call from /download-logs/info. Method: GET
+2022-11-14T14:14:16.495Z [coe_challenge] debug: File retrieved
+2022-11-14T14:14:22.943Z [coe_challenge] debug: API call from /download-logs/error. Method: GET
+2022-11-14T14:14:23.044Z [coe_challenge] debug: File retrieved
+2022-11-14T14:14:28.954Z [coe_challenge] debug: API call from /download-logs/error. Method: GET
+2022-11-14T14:45:24.188Z [coe_challenge] debug: Connected to database 
+2022-11-14T14:46:13.441Z [coe_challenge] debug: Connected to database 
+2022-11-15T00:25:31.382Z [coe_challenge] debug: API call from /download-logs/error. Method: GET
+2022-11-15T00:25:41.223Z [coe_challenge] debug: API call from /user/login. Method: POST
+2022-11-15T00:25:54.493Z [coe_challenge] debug: API call from /download-logs/error. Method: GET
+2022-11-15T00:25:54.660Z [coe_challenge] debug: Sent:
+2022-11-15T00:26:02.523Z [coe_challenge] debug: API call from /download-logs/error. Method: GET
+2022-11-15T00:26:02.837Z [coe_challenge] debug: Sent:
+2022-11-15T00:26:07.519Z [coe_challenge] debug: API call from /download-logs/error. Method: GET
+2022-11-15T00:26:07.674Z [coe_challenge] debug: Sent:
+2022-11-15T00:26:08.965Z [coe_challenge] debug: API call from /download-logs/error. Method: GET
+2022-11-15T00:26:09.106Z [coe_challenge] debug: Sent:
+2022-11-15T00:26:09.960Z [coe_challenge] debug: API call from /download-logs/error. Method: GET
+2022-11-15T00:26:10.254Z [coe_challenge] debug: Sent:
+2022-11-15T00:26:10.907Z [coe_challenge] debug: API call from /download-logs/error. Method: GET
+2022-11-15T00:26:11.111Z [coe_challenge] debug: Sent:
+2022-11-15T00:26:13.120Z [coe_challenge] debug: API call from /download-logs/error. Method: GET
+2022-11-15T00:26:13.272Z [coe_challenge] debug: Sent:
+2022-11-15T00:26:26.650Z [coe_challenge] debug: API call from /download-logs/debug. Method: GET
+2022-11-15T00:26:32.537Z [coe_challenge] debug: API call from /download-logs/info. Method: GET
+2022-11-15T00:26:33.015Z [coe_challenge] debug: Sent:
+2022-11-15T00:26:45.366Z [coe_challenge] debug: API call from /download-logs/warning. Method: GET
+2022-11-15T00:26:45.604Z [coe_challenge] debug: Sent:
+2022-11-15T00:27:00.553Z [coe_challenge] debug: API call from /download-logs/warning. Method: GET
+2022-11-15T00:27:00.803Z [coe_challenge] debug: Sent:
+2022-11-15T00:27:24.570Z [coe_challenge] debug: API call from /download-logs/warning. Method: GET
+2022-11-15T00:27:24.673Z [coe_challenge] debug: Sent:
